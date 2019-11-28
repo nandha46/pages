@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="icon" type="image/png" href="/var/www/html/unsecured-114-288573.png" />
+<title>Home</title>
+</head>
+
+<body>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
+html {
+font-family: 'Work Sans', sans-serif;
+/*background: #fff8dc;*/
+}
+
+body {
+padding: 40px 0;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(3, 280px);
+grid-gap: 20px;
+align-items: center;
+justify-content: center;
+}
+
+.grid>article {
+border: 1px solid #ccc;
+box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+background: #FFF;
+cursor: pointer;
+}
+
+.grid>article:hover {
+transition-duration: 200ms;
+box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.6);
+transform: rotate(20deg);
+}
+
+.grid>article img {
+max-width: 100%;
+;
+}
+
+.grid .text {
+padding: 20px;
+background: white;
+border-top: 1px solid rgb(1, 1, 1, 0.1);
+}
+</style>
+<div class="container">
+<main class="grid">
+<article onclick="window.location='/ftp/admin';">
+<img src="/img/My-files.png" alt="Sample photo">
+<div class="text">
+<h3>Admin</h3>
+<p>Requires admin privilages</p>
+<!-- <a href="/admin" class="btn btn-primary btn-block">Here's why</a> -->
+</div>
+</article>
+<article onclick="window.location='/siccodeMapping.html';">
+<img src="/img/SIC-Code-Mapping.png" alt="Sample photo">
+<div class="text">
+<h3>SIC Code Mapping</h3>
+<p>For Reference of DM Team</p>
+<!-- <a href="/ftp" class="btn btn-primary btn-block">Read more</a> -->
+</div>
+</article>
+<article onclick="window.location='/testmachines.html';">
+<img src="/img/Test-Machines.png" alt="Sample photo">
+<div class="text">
+<h3>HDD</h3>
+<p>Might be offline at times</p>
+<!-- <a href="/hdd" class="btn btn-primary btn-block">Here's how</a> -->
+</div>
+</article>
+<!-- <iframe src="/img/cdwrite.jpg" width="480" height="390" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> -->
+</main>
+</div>
+</body>
+</html>
