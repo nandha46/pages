@@ -1,0 +1,79 @@
+<html style="height: 96.5vh;">
+<head>
+    <title>Scrapy - DC Tool</title><!--NO I18N-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="http://localjs.zohostatic.com/scrapy/scrapy_v1/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://localjs.zohostatic.com/scrapy/scrapy_v1/js/scrapyUtil.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"
+          id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+
+
+<nav class="navbar navbar-default navbar-static-top"><!--NO I18N-->
+    <img id="logo" src="http://localimg.zohostatic.com/scrapy/scrapy_v1/images/zohoScrapy.png" height="30px;"
+         width="90px;" style="margin-left: 19px;margin-top:-9px;">
+    <label style="font-family: 'serif';font-size:20px;margin-left: 10px;margin-top: 10px;"> <font color="#383838">SCRAPY<!--NO I18N-->
+        - DC</font></label><!--NO I18N-->
+</nav><!--NO I18N-->
+<div class="container-fluid main-container">
+    <div class="col-md-2 sidebar">
+        <div class="row">
+            <div class="absolute-wrapper"></div>
+            <div class="side-menu">
+                <nav class="navbar navbar-default" role="navigation"><!--NO I18N-->
+                    <div class="side-menu-container">
+                        <ul class="nav navbar-nav">
+
+                            <li value="Upload File" id="upload-file-navBar" onclick="navigateRootPage(this,false,'updateDoc.jsp');"><a style="cursor: pointer;"><span
+                                    class="glyphicon glyphicon-cloud-upload"></span> SeedDetail</a></li><!--NO I18N-->
+                            <li value="Upload File" id="upload-file-navBar" onclick="navigateRootPage(this,false,'dailyStatus.jsp');"><a style="cursor: pointer;"><span
+                                    class="glyphicon glyphicon-cloud-upload"></span> DailyStatus</a></li><!--NO I18N-->
+                            <!--li value="Edit Doc" id="edit-navBar" onclick="navigateRootPage(this,false,'editDoc.jsp');"><a style="cursor: pointer;"><span
+                                    class="glyphicon glyphicon glyphicon-edit"></span> Edit Doc</a></li><!--NO I18N-->
+                            <!--li value="Review Doc" id="review-navBar" onclick="navigateRootPage(this,false,'reviewDoc.jsp');"><a style="cursor: pointer;"><span
+                                    class="glyphicon glyphicon-screenshot"></span> Review Doc</a></li><!--NO I18N-->
+                            <!--li value="Review Doc With Email" id="review-with-email-navBar" onclick="navigateRootPage(this,false,'reviewDocWithModifierEmail.jsp');"><a style="cursor: pointer;"><span
+                                    class="glyphicon glyphicon-dashboard"></span> Review Doc With Email</a></li><!--NO I18N-->
+
+
+                            <li value="Stats" id="stats-navBar" onclick="navigateRootPage(this,false,'dcStats.jsp');"><a style="cursor: pointer;"><span
+                                    class="glyphicon glyphicon-signal"></span>Stats</a></li><!--NO I18N-->
+                            <!--li value="Imperfection Stats" id="perfection-stats-navBar" onclick="navigateRootPage(this,false,'perfection.jsp');"><a style="cursor: pointer;"><span
+                                    class="glyphicon glyphicon-thumbs-down"></span>Imperfection Stats</a></li><!--NO I18N-->
+                        </ul>
+                    </div>
+                </nav><!--NO I18N-->
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-10 content">
+        <div class="panel panel-default" style="height:90%;">
+            <div id="panel-heading" class="panel-heading">&nbsp;
+            </div>
+            <div id="panel-body" class="panel-body" style="height:90%;overflow-x: hidden;overflow-y: auto;">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

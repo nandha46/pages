@@ -30,6 +30,21 @@ align-items: center;
 justify-content: center;
 }
 
+article#a {
+transition-duration:100ms;
+transform: rotate(10deg);
+}
+
+article#b {
+transition-duration:100ms;
+transform: rotate(-8deg);
+}
+
+article#c {
+transition-duration:100ms;
+transform: rotate(14deg);
+}
+
 .grid>article {
 border: 1px solid #ccc;
 box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
@@ -37,11 +52,23 @@ background: #FFF;
 cursor: pointer;
 }
 
-.grid>article:hover {
-transition-duration: 200ms;
+.grid>article#a:hover {
+transition-duration: 300ms;
 box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.6);
-transform: rotate(20deg);
+transform: scale(1.1);
 }
+.grid>article#b:hover {
+transition-duration: 300ms;
+box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.6);
+transform: scale(1.1);
+}
+.grid>article#c:hover {
+transition-duration: 300ms;
+box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.6);
+transform: scale(1.1);
+}
+
+
 
 .grid>article img {
 max-width: 100%;
@@ -56,7 +83,7 @@ border-top: 1px solid rgb(1, 1, 1, 0.1);
 </style>
 <div class="container">
 <main class="grid">
-<article onclick="window.location='/ftp/admin';">
+<article onclick="window.location='/Seed Dashboard/index.html';" id='a'>
 <img src="/img/My-files.png" alt="Sample photo">
 <div class="text">
 <h3>Admin</h3>
@@ -64,7 +91,7 @@ border-top: 1px solid rgb(1, 1, 1, 0.1);
 <!-- <a href="/admin" class="btn btn-primary btn-block">Here's why</a> -->
 </div>
 </article>
-<article onclick="window.location='/siccodeMapping.html';">
+<article onclick="window.location='/siccodeMapping.html';" id="b">
 <img src="/img/SIC-Code-Mapping.png" alt="Sample photo">
 <div class="text">
 <h3>SIC Code Mapping</h3>
@@ -72,7 +99,7 @@ border-top: 1px solid rgb(1, 1, 1, 0.1);
 <!-- <a href="/ftp" class="btn btn-primary btn-block">Read more</a> -->
 </div>
 </article>
-<article onclick="window.location='/testmachines.html';">
+<article onclick="window.location='/testmachines.html';" id="c">
 <img src="/img/Test-Machines.png" alt="Sample photo">
 <div class="text">
 <h3>HDD</h3>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
+html {
+font-family: 'Work Sans', sans-serif;
+/*background: #fff8dc;*/
+}
+
+
+.grid {
+display: grid;
+grid-template-columns: repeat(3, 280px);
+grid-gap: 20px;
+align-items: center;
+justify-content: center;
+}
+
+.grid>article {
+border: 1px solid #ccc;
+box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+background: #FFF;
+cursor: pointer;
+}
+
+.grid>article:hover {
+transition-duration: 300ms;
+box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.7);
+/*transform: rotate(20deg);*/
+transform: scale(1.03);
+}
+
+.grid>article img {
+max-width: 100%;
+
+}
+
+.grid .text {
+padding: 20px;
+background: white;
+border-top: 1px solid rgb(1, 1, 1, 0.1);
+}
+</style>
+</head>
+
+<body>
+    
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Seed URL Status</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <p><a href="index.html"> Seed Dashboard</p>
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="SeedUploadForm.html">Seed Upload</a>
+                    </li>
+                    <li>
+                        <a href="#">Allowed URLs</a>
+                    </li>
+                    <li>
+                        <a href="#">Country Stats</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Daily Status</a>
+                    </li>
+                    <li>
+                        <a href="#">Crawled Stats</a>
+                    </li>
+                    <li>
+                        <a href="#">Weekly Stats</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+<div id="content">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fas fa-align-left"></i>
+                <span>Toggle Sidebar</span>
+            </button>
+
+        </div>
+    </nav>
+<div class="formcontainer" align="center">
+<form action="/seedUpload" method="get">
+    <fieldset>
+        <legend>Enter Seed details</legend>
+        <span>Date: <input type="date" name="date"> <br><br></span>
+        Seed URL:<input type="URL" name="seedUrl"><br><br>
+        Country:<input type="text" name="Country"><br><br>
+        Details Available:
+                Org name<input type="checkbox" name="Org_name" value="Org_name">
+                website<input type="checkbox" name="website" value="website">
+                email<input type="checkbox" name="email" value="email">
+                industry<input type="checkbox" name="industry" value="industry">
+        <br><br>
+        isCrawlable:<select name="isCrawlable">
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                    </select>
+        <br><br>
+        isSchema Written:<select name="isSchemaWritten">
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                    </select><br><br>
+        Terms n Conditions: <input type="text" name="terms"><br><br><br><br>
+        <input type="submit">   
+    </fieldset>
+</form>
+</div>
+</div>
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+</script>
+</body>
+</html>
