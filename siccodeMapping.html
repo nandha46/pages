@@ -4,6 +4,21 @@
 <title>SIC CODE INDUSTRY MAPPING</title>
 <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+<!--Table Sorter  -->
+<script src="https://mottie.github.io/tablesorter/docs/js/jquery-1.2.6.min.js"></script>
+<!-- <link href="https://mottie.github.io/tablesorter/dist/css/theme.default.min.css" rel="stylesheet">  -->
+<script src="https://mottie.github.io/tablesorter/dist/js/jquery.tablesorter.min.js"></script>
+<script src="https://mottie.github.io/tablesorter/dist/js/jquery.tablesorter.widgets.min.js"></script>
+<script>
+	$(function(){
+		$('table').tablesorter({
+			widgets        : ['zebra', 'columns'],
+			usNumberFormat : false,
+			sortReset      : true,
+			sortRestart    : true
+		});
+	});
+	</script>
 
 <style type="text/css">
   @import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
@@ -37,7 +52,7 @@ text-align:center;
 .tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
 .tg .tg-0lax{text-align:left;vertical-align:top}
 tr:nth-child(even) {background-color: #EEEEFF;}
-tr:nth-child(1) {
+#first {
    font-size:20px;
 background-image: linear-gradient(to bottom right, rgb(211, 137, 137), rgb(81, 79, 200));}
 h2{font-family: 'Raleway', sans-serif;}
@@ -51,12 +66,15 @@ tr:hover {background-color: rgb(52, 211, 91);   }
 <h2>SICCODE MAPPING</h2>
 </header> 
 <table class="tg">
-  <tr>
+ <thead>
+  <tr id="first">
     <th class="tg-cly1">SIC CODE</th>
     <th class="tg-cly1">NAICS CODE</th>
     <th class="tg-cly1">UK_SICCODE</th>
     <th class="tg-0lax">INDUSTRY</th>
   </tr>
+</thead>
+<tbody>
   <tr>
     <td class="tg-cly1">7291,872</td>
     <td class="tg-cly1">54121</td>
@@ -477,6 +495,7 @@ tr:hover {background-color: rgb(52, 211, 91);   }
     <td class="tg-0lax">022,16,3101,3102,3109</td>
     <td class="tg-0lax">Wood and Furniture Manufacturing and Dealers</td>
   </tr>
+</tbody>
 </table>
 <footer>
 For DM Team Reference
