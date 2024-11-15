@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Work Sans', sans-serif;
+    src: url(../assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf) format('ttf');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+html {
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    padding: 40px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+article#a {
+    transition-duration: 100ms;
+    transform: rotate(10deg);
+}
+
+article#b {
+    transition-duration: 100ms;
+    transform: rotate(-8deg);
+}
+
+article#c {
+    transition-duration: 100ms;
+    transform: rotate(14deg);
+}
+
+.grid>article {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    background: #FFF;
+    cursor: pointer;
+}
+
+.grid>article#a:hover {
+    transition-duration: 300ms;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.6);
+    transform: scale(1.1);
+}
+
+.grid>article#b:hover {
+    transition-duration: 300ms;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.6);
+    transform: scale(1.1);
+}
+
+.grid>article#c:hover {
+    transition-duration: 300ms;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.6);
+    transform: scale(1.1);
+}
+
+
+
+.grid>article img {
+    max-width: 100%;
+    ;
+}
+
+.grid .text {
+    padding: 20px;
+    background: white;
+    border-top: 1px solid rgb(1, 1, 1, 0.1);
+}

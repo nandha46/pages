@@ -1,19 +1,40 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Help IE with utf8; thank you, Glards! -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="description" content="Turn text upside down. Rotate letters 180 degrees with Unicode.">
-  <title>Flip</title>
-  <style type="text/css">
+  <title>Flip Text</title>
+  <style>
     textarea {
       font-family: "Arial Unicode MS", Batang
     }
-
     h1 {
       margin-bottom: 2px;
     }
   </style>
+</head>
+<body>
+  <h1>Flip</h1>
+  <form name="f">Original:
+    <br>
+    <textarea rows="5" cols="50" name="original" onkeyup="flip()"></textarea> <input value="Flip" onclick="flip()"
+      type="button">
+    <br>
+    Flipped:
+    <br>
+    <textarea rows="5" cols="50" name="flipped"></textarea>
+  </form>
+
+  <p style="width: 300px;">
+    <small>I got the idea to do this from <a href="http://pne.livejournal.com/398399.html">a post by pne</a>. Thank you
+      to Brook Monroe, Tim McCormack, Glards, and Yeeliberto amongst others for further suggestions.
+      <br><br>
+      This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
+        Commons Attribution-Share Alike 3.0 Unported License</a>.
+      <br><br>
+      <a href="http://www.revfad.com/">Reverse Fad Productions</a>
+    </small>
+  </p>
   <script>
     function flip() {
       var result = flipString(document.f.original.value.toLowerCase());
@@ -71,30 +92,5 @@
       flipTable[flipTable[i]] = i
     }
   </script>
-</head>
-
-<body>
-  <h1>Flip</h1>
-  <form name="f">Original:
-    <br>
-    <textarea rows="5" cols="50" name="original" onkeyup="flip()"></textarea> <input value="Flip" onclick="flip()"
-      type="button">
-    <br>
-    Flipped:
-    <br>
-    <textarea rows="5" cols="50" name="flipped"></textarea>
-  </form>
-
-  <p style="width: 300px;">
-    <small>I got the idea to do this from <a href="http://pne.livejournal.com/398399.html">a post by pne</a>. Thank you
-      to Brook Monroe, Tim McCormack, Glards, and Yeeliberto amongst others for further suggestions.
-      <br><br>
-      This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
-        Commons Attribution-Share Alike 3.0 Unported License</a>.
-      <br><br>
-      <a href="http://www.revfad.com/">Reverse Fad Productions</a>
-    </small>
-  </p>
 </body>
-
 </html>

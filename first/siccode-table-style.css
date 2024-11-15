@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
+tr>td:nth-of-type(1) {
+    font-family: 'Comfortaa', cursive;
+}
+
+tr>td:nth-of-type(2) {
+    font-family: 'Comfortaa', cursive;
+}
+
+tr>td:nth-of-type(3) {
+    font-family: 'Comfortaa', cursive;
+}
+
+tr>td:nth-of-type(4) {
+    font-family: 'Work Sans', sans-serif;
+}
+
+header {
+    text-align: center;
+    font-size: 30px;
+    background: -webkit-linear-gradient(#ff4b1f, #1fddff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+footer {
+    text-align: center;
+    font-size: 20px
+}
+
+
+table {
+    width: 100%;
+}
+
+.tg td {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    border-color: black;
+    word-break: break-word;
+    width: 25%;
+}
+
+.tg th {
+    font-family: 'Raleway', sans-serif;
+    ;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: break-word;
+    border-color: silver;
+    text-align: center;
+}
+
+.tg .tg-1wig {
+    font-weight: bold;
+    text-align: left;
+    vertical-align: top
+}
+
+.tg .tg-0lax {
+    text-align: left;
+    vertical-align: top
+}
+
+tr:nth-child(even) {
+    background-color: #EEEEFF;
+}
+
+#first {
+    font-size: 20px;
+    background-image: linear-gradient(to bottom right, rgb(211, 137, 137), rgb(81, 79, 200));
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+}
+
+tr:hover {
+    background-color: rgb(52, 211, 91);
+}

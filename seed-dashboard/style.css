@@ -1,7 +1,43 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-body {
-    font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
+html {
+    font-family: 'Work Sans', sans-serif;
     background: #fafafa;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid>article {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    background: #FFF;
+    cursor: pointer;
+}
+
+.grid>article:hover {
+    transition-duration: 300ms;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.7);
+    /*transform: rotate(20deg);*/
+    transform: scale(1.03);
+}
+
+.grid>article img {
+    max-width: 100%;
+
+}
+
+.grid .text {
+    padding: 20px;
+    background: white;
+    border-top: 1px solid rgb(1, 1, 1, 0.1);
 }
 
 p {
@@ -156,9 +192,11 @@ a.article:hover {
     #sidebar {
         margin-left: -250px;
     }
+
     #sidebar.active {
         margin-left: 0;
     }
+
     #sidebarCollapse span {
         display: none;
     }
